@@ -1,0 +1,25 @@
+  
+  /* Header Background */
+
+  .header-background {
+      background-color: black;
+      color: white;
+  }
+  
+  .example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+
+
+
+
+  /* Footer (Solo visible en PC)*/
+  
+  .footer {
+    position: absolute;
+    bottom: 0;
+  }
