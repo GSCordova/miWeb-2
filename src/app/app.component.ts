@@ -7,16 +7,10 @@ export interface DialogData {
   name: string;
 }
 
-/**
- * @title Dialog Overview
- */
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']/*
-  selector: 'dialog-overview-example',
-  templateUrl: 'dialog-overview-example.html',
-  styleUrls: ['dialog-overview-example.css'],*/
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
 
@@ -27,7 +21,7 @@ export class AppComponent {
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '250px',
+      width: '300px',
       data: {name: this.name, animal: this.animal}
     });
 
