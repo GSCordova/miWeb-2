@@ -4,13 +4,19 @@
   <mat-toolbar-row>
     <span>Gianmarco Segura</span>
     <span class="example-spacer"></span>
-    <mat-icon class="example-icon">verified_user</mat-icon>
+    <!--
+    <mat-icon class="example-icon header-icon" 
+              matTooltip="Cambiar el estilo"
+              matTooltipPosition="below">autorenew
+    </mat-icon>
+    <mat-icon class="example-icon">language</mat-icon>-->
   </mat-toolbar-row>
 </mat-toolbar>
 
 
 <!-- Footer -->
 <mat-toolbar class="footer">
-    <mat-icon class="example-icon">language</mat-icon>
-    <mat-icon class="example-icon">phone</mat-icon>
+  <span class="footer-centrado" (click)="openDialog()">
+    Contacto<mat-icon class="example-icon">phone</mat-icon>
+  </span>
 </mat-toolbar>
