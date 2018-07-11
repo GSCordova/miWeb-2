@@ -1,0 +1,15 @@
+  .footer {
+    position: absolute;
+    bottom: 0;
+    justify-content: space-around;
+    background-color: #ededed;
+  }
+
+  .footer i, span {
+    cursor: pointer;
+  }
+
+  .footer-centrado {
+    display: flex;
+    align-items: center;
+  }
