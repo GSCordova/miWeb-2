@@ -8,9 +8,10 @@ import { MyMaterialComponents } from './material.design-componentes';
 
 // Componentes
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { Prueba } from './components/pruebamain/prueba';
-import { Prueba2 } from './components/pruebamain2/prueba2';
+import { MainComponent } from './components/main/main.component';
+import { GianmarcoComponent } from './components/gianmarco/gianmarco.component';
 
 // ModalFooter
 import { FooterModal } from './components/footer/footer.component';
@@ -23,11 +24,12 @@ import 'hammerjs';
 
 @NgModule({
   declarations: [
-    AppComponent, 
+    AppComponent,
     FooterModal,
+    HeaderComponent,
     FooterComponent,
-    Prueba,
-    Prueba2
+    MainComponent,
+    GianmarcoComponent
   ],
   imports: [
     BrowserModule,

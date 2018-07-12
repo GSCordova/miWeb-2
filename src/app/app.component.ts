@@ -1,6 +1,6 @@
 
 import { Component } from '@angular/core';
-import { trigger, state, style, animate, transition, query } from '@angular/animations';
+import { trigger, style, animate, transition, query } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -40,10 +40,30 @@ import { trigger, state, style, animate, transition, query } from '@angular/anim
     ])
   ]
 })
+
 export class AppComponent {
+
+  escritura: string = '';
+
+  constructor() {
+    document.addEventListener('keyup', (ev) => {
+
+      this.escritura += ev.key;
+
+      if(this.escritura.includes('cv.esp')) {
+        alert('Download CV Español');
+        this.escritura = '';
+      } else if (this.escritura.includes('cv.eng')) {
+        alert('Download CV Ingles');
+        this.escritura = '';
+      }
+
+    });
+
+  }
 
   getRouteAnimation(outlet) {
     return outlet.activatedRouteData.animation;
   }
 
- }
+}

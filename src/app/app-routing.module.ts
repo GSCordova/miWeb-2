@@ -1,13 +1,14 @@
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { Prueba } from './components/pruebamain/prueba';
-import { Prueba2 } from './components/pruebamain2/prueba2';
+import { MainComponent } from './components/main/main.component';
+import { GianmarcoComponent } from './components/gianmarco/gianmarco.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: '/prueba', pathMatch: 'full' },
-    { path: 'prueba', component: Prueba, data: { animation: 'prueba' } },
-    { path: 'prueba2', component: Prueba2, data: { animation: 'prueba2' } }
+    { path: '', redirectTo: '/main', pathMatch: 'full' },
+    { path: 'main', component: MainComponent, data: { animation: 'main' } },
+    { path: 'gianmarco', component: GianmarcoComponent, data: { animation: 'gianmarco' } },
+    { path: '**', component: MainComponent}
   ];
 
 @NgModule({
