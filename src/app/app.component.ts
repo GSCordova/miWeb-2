@@ -2,6 +2,9 @@
 import { Component } from '@angular/core';
 import { trigger, style, animate, transition, query } from '@angular/animations';
 
+import * as dataEspañol from "./idioma/español.json";
+import * as dataIngles from "./idioma/ingles.json";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -44,8 +47,17 @@ import { trigger, style, animate, transition, query } from '@angular/animations'
 export class AppComponent {
 
   escritura: string = '';
+  valor: number = 1;
+  idioma = {};
 
   constructor() {
+
+    if( sessionStorage.getItem('language') == 'esp' ) {
+      sessionStorage.setItem('lenguageElegido', dataEspañol); 
+    } else {
+      sessionStorage.setItem('lenguageElegido', dataIngles); 
+    }
+
     document.addEventListener('keyup', (ev) => {
 
       this.escritura += ev.key;

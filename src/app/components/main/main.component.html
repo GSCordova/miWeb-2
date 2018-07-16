@@ -1,6 +1,4 @@
-<!--h1>Component MAIN</h1>
 
-<a routerLink="/gianmarco">prueba2</a>-->
 <!-- CON SRC SET DEFINIMOS QUE IMAGEN QUEREMOS MOSTRAR DEPENDIENDO DEL ANCHO DE PANTALLA -->
 <div class="container main-espacio">
     <div class="row" style="align-items: center">
@@ -8,10 +6,21 @@
             <img src="./../../../assets/sobremi.png" routerLink="/gianmarco" alt="sobremi_error" srcset="">
         </div>
         <div class="col-4 text-center">
-            <img src="./../../../assets/aptitudes.png" alt="" srcset="">
+            <img src="./../../../assets/aptitudes.png" routerLink="/aptitudes" alt="aptitudes_error" srcset="">
         </div>
         <div class="col-4 text-center">
-            <img src="./../../../assets/portfolio.png" alt="" srcset="">
+            <img src="./../../../assets/portfolio.png" routerLink="/portfolio" alt="portfolio_error" srcset="">
+        </div>
+    </div>
+    <div class="row" style="margin-top: -20px">
+        <div class="col-4 text-center">
+            Sobre Mí
+        </div>
+        <div class="col-4 text-center">
+            Aptitudes & Experiencia
+        </div>
+        <div class="col-4 text-center">
+            Portfolio
         </div>
     </div>
 </div>

@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
     templateUrl: './gianmarco.component.html'
   })
 
-export class GianmarcoComponent { }
+export class GianmarcoComponent {
+
+  goBack() {
+    window.history.back();
+  }
+
+}

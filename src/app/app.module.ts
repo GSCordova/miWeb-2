@@ -12,6 +12,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainComponent } from './components/main/main.component';
 import { GianmarcoComponent } from './components/gianmarco/gianmarco.component';
+import { AptitudesComponent } from './components/aptitudes/aptitudes.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 // ModalFooter
 import { FooterModal } from './components/footer/footer.component';
@@ -22,6 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
 // Hammer.js
 import 'hammerjs';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +32,9 @@ import 'hammerjs';
     HeaderComponent,
     FooterComponent,
     MainComponent,
-    GianmarcoComponent
+    GianmarcoComponent,
+    AptitudesComponent,
+    PortfolioComponent
   ],
   imports: [
     BrowserModule,

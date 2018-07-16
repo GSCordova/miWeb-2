@@ -8,6 +8,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
 
 const Material = [
     MatToolbarModule,
@@ -16,7 +18,9 @@ const Material = [
     MatMenuModule,
     MatDialogModule,
     MatFormFieldModule,
-    MatListModule
+    MatListModule,
+    MatButtonModule,
+    MatSelectModule
 ]
 
 @NgModule({
