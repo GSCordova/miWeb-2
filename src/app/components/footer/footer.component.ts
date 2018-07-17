@@ -8,7 +8,6 @@ import { MatDialog, MatDialogRef } from '@angular/material';
     styleUrls: ['./footer.component.css']
   })
 
-
 export class FooterComponent {
 
   animal: string;
@@ -29,8 +28,9 @@ export class FooterComponent {
 }
 
 @Component({
-    selector: 'app.component-dialog',
-    templateUrl: 'app.component-dialog.html',
+    selector: 'footer.component-dialog',
+    templateUrl: 'footer.component-dialog.html',
+    styleUrls: ['./footer.component-dialog.css']
   })
 
 export class FooterModal {

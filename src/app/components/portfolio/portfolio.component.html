@@ -12,4 +12,74 @@
             </button>
         </div>
     </div>
+    <div class="container">
+            <p>Estos son los proyectos en los que he trabajo y/o creado:</p>            
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Proyecto</th>
+                        <th>Tipo</th>
+                        <th>Tecnologías</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor='let elements of works'>
+                        <tr>
+                            <td>{{ elements.proyect }}</td>
+                            <td>{{ elements.tipo }}</td>
+                            <td>{{ elements.tecnologias }}</td>
+                        </tr>
+                    </ng-container>
+              </tbody>
+            </table>
+            <nav aria-label="...">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" tabindex="-1">Página</a>
+                    </li>
+                    <li class="page-item" data-pagina="1" (click)="pulsandoPaginacion(event)">
+                        <a class="page-link">1</a>
+                    </li>
+                    <li class="page-item" data-pagina="2" (click)="pulsandoPaginacion(event)">
+                        <a class="page-link">2</a>
+                    </li>
+                    <li class="page-item" data-pagina="3" (click)="pulsandoPaginacion(event)">
+                        <a class="page-link">3</a>
+                    </li>
+                </ul>
+            </nav>
+          </div>
+          
+    <!--div class="row mt-4">
+        <div class="col-6">
+            <mat-card class="example-card">
+                <img mat-card-image src="" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>Ver Original</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+        <div class="col-6">
+            <mat-card class="example-card">
+                <img mat-card-image src="" alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <p>
+                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                    A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                    bred for hunting.
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>Ver Original</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div-->
 </div>

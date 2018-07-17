@@ -1,4 +1,10 @@
 
+@import url('https://fonts.googleapis.com/css?family=Exo');
+
+.main-espacio {
+    font-family: 'Exo', sans-serif;
+}
+
 .main-espacio img {
     width: 225px;
     margin-bottom: 15px;

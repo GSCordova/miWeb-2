@@ -1,9 +1,6 @@
 
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { trigger, style, animate, transition, query } from '@angular/animations';
-
-import * as dataEspañol from "./idioma/español.json";
-import * as dataIngles from "./idioma/ingles.json";
 
 @Component({
   selector: 'app-root',
@@ -44,19 +41,13 @@ import * as dataIngles from "./idioma/ingles.json";
   ]
 })
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   escritura: string = '';
-  valor: number = 1;
-  idioma = {};
 
-  constructor() {
+  constructor() {  }
 
-    if( sessionStorage.getItem('language') == 'esp' ) {
-      sessionStorage.setItem('lenguageElegido', dataEspañol); 
-    } else {
-      sessionStorage.setItem('lenguageElegido', dataIngles); 
-    }
+  ngOnInit() {
 
     document.addEventListener('keyup', (ev) => {
 
@@ -71,6 +62,7 @@ export class AppComponent {
       }
 
     });
+
 
   }
 
