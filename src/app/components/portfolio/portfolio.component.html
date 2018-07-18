@@ -1,33 +1,31 @@
 <div class="container main-espacio-menos">
-    <div class="row">
-        <div class="col-4">
-
-        </div>
-        <div class="col-4">
-
-        </div>
-        <div class="col-4" style="text-align: right">
-            <button mat-raised-button (click)='goBack()'>
-                    <mat-icon class="example-icon">keyboard_arrow_left</mat-icon>
-            </button>
-        </div>
-    </div>
     <div class="container">
-            <p>Estos son los proyectos en los que he trabajo y/o creado:</p>            
+            <p class="portfolio-titulo">
+                Estos son los proyectos en los que he trabajo y/o creado:
+                <button mat-raised-button (click)='goBack()'>
+                        <mat-icon class="example-icon">keyboard_arrow_left</mat-icon>
+                </button>
+            </p>            
             <table class="table table-striped">
                 <thead>
                     <tr>
                         <th>Proyecto</th>
                         <th>Tipo</th>
-                        <th>Tecnologías</th>
+                        <th>Información</th>
+                        <th></th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="portfolio-body">
                     <ng-container *ngFor='let elements of works'>
                         <tr>
                             <td>{{ elements.proyect }}</td>
                             <td>{{ elements.tipo }}</td>
-                            <td>{{ elements.tecnologias }}</td>
+                            <td>
+                                <button mat-raised-button>Info</button>
+                            </td>
+                            <td>
+                                <button mat-raised-button *ngIf='elements.visible'>Ver Proyecto</button>
+                            </td>
                         </tr>
                     </ng-container>
               </tbody>
@@ -37,13 +35,13 @@
                     <li class="page-item disabled">
                         <a class="page-link" tabindex="-1">Página</a>
                     </li>
-                    <li class="page-item" data-pagina="1" (click)="pulsandoPaginacion(event)">
+                    <li id='paginado' class="page-item" (click)="pulsandoPaginacion()">
                         <a class="page-link">1</a>
                     </li>
-                    <li class="page-item" data-pagina="2" (click)="pulsandoPaginacion(event)">
+                    <li id='paginado' class="page-item" (click)="pulsandoPaginacion()">
                         <a class="page-link">2</a>
                     </li>
-                    <li class="page-item" data-pagina="3" (click)="pulsandoPaginacion(event)">
+                    <li id='paginado' class="page-item" (click)="pulsandoPaginacion()">
                         <a class="page-link">3</a>
                     </li>
                 </ul>

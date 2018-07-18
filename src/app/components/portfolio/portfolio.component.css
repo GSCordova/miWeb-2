@@ -7,6 +7,16 @@
     background-size: cover;
 }
 
+.portfolio-titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.portfolio-body {
+    font-size: 0.8rem;
+}
+
 mat-card {
     margin: auto !important;
 }

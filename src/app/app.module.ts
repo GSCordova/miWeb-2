@@ -49,3 +49,18 @@ import 'hammerjs';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+/*
+
+Colorear la página actual en el paginador.
+Poner los 2 idiomas Header.
+Añadir diseños Header.
+Responsive.
+Imagenes para responsive.
+Separar los linkes de Contacto / Curriculum
+Añadir los 2 CV con sus funcionalidades
+Minijuego SimonDice
+
+
+
+*/ 

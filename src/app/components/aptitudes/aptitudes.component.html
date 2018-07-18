@@ -1,12 +1,43 @@
 <div class="container main-espacio-menos">
     <div class="row">
-        <div class="col-4"></div>
-        <div class="col-4 text-center">Desarrollador Web</div>
-        <div class="col-4" style="text-align: right">
+        <div class='col-12 aptitudes-titulo'>
+            FrontEnd Developer
             <button mat-raised-button (click)='goBack()'>
                     <mat-icon class="example-icon">keyboard_arrow_left</mat-icon>
             </button>
         </div>
     </div>
-    
+</div>
+<div class="container mt-3">
+    <mat-accordion class="example-headers-align">
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-description>
+                    HTML & CSS  -  Mis aptitudes en maquetación
+                    <mat-icon>desktop_windows</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            Bootstrap 3 & 4, Sass, Less, CSS Grid, Flexbox, Cross-Browser, Responsive Design, Angular Material
+        </mat-expansion-panel>
+              
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-description>
+                    Javascript  -  Mis aptitudes en programación
+                    <mat-icon>extension</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            ECMAScript 5 & 6, Vanilla JS, Typescript, jQuery, Angular 4 & 6, AngularJS, npm
+        </mat-expansion-panel>
+              
+        <mat-expansion-panel hideToggle>
+            <mat-expansion-panel-header>
+                <mat-panel-description>
+                        Herramientas utilizadas
+                    <mat-icon>build</mat-icon>
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            Windows, Linux, Git, SVN, Bitbucket, Jira, Zeplin
+        </mat-expansion-panel>
+    </mat-accordion>
 </div>
