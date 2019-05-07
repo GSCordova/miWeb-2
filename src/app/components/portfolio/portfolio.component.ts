@@ -1,12 +1,5 @@
-import { Component } from '@angular/core';
-
-export interface Projectos {
-  proyect: string;
-  tecnologias: string;
-  tipo: string;
-  visible: boolean;
-}
-
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator, MatTableDataSource } from '@angular/material';
 
 @Component ({
     selector: 'portfolio-component',
@@ -14,45 +7,42 @@ export interface Projectos {
     styleUrls: ['./portfolio.component.css']
 })
 
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
 
-  works: Projectos[] = [
-    {proyect: 'BBVA Global Net Cash (Actualmente)', tipo: 'Laboral', tecnologias: 'JS', visible: true},
-    {proyect: 'BBVA Net Cash', tipo: 'Laboral', tecnologias: 'JS', visible: true},
-    {proyect: 'IBM App Web Interna', tipo: 'Laboral', tecnologias: 'JS', visible: false},
-    {proyect: 'Bankinter - Onboarding Web', tipo: 'Laboral', tecnologias: 'JS', visible: false},
-    {proyect: 'ConvertMe', tipo: 'Personal', tecnologias: 'JS', visible: true}
-  ]
+  displayedColumns: string[] = ['proyecto', 'info', 'visible', 'git'];
+  dataSource = new MatTableDataSource<ProjectElement>(ELEMENT_DATA);
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+
+  ngOnInit() {
+    this.dataSource.paginator = this.paginator;
+    console.log(this.dataSource);
+  }
 
   goBack() {
     window.history.back();
   }
-
-  pulsandoPaginacion() {
-
-      if(event.target.innerHTML == 1) {
-            this.works = [
-                {proyect: 'BBVA Global Net Cash (Actualmente)', tipo: 'Laboral', tecnologias: 'JS', visible: true},
-                {proyect: 'BBVA Net Cash', tipo: 'Laboral', tecnologias: 'JS', visible: true},
-                {proyect: 'IBM App Web Interna', tipo: 'Laboral', tecnologias: 'JS', visible: false},
-                {proyect: 'Bankinter - Onboarding Web', tipo: 'Laboral', tecnologias: 'JS', visible: false},
-                {proyect: 'ConvertMe', tipo: 'Personal', tecnologias: 'JS', visible: true}
-            ]
-      } else if (event.target.innerHTML == 2) {
-            this.works = [
-                {proyect: 'Tres en Raya', tipo: 'Personal', tecnologias: 'JS', visible: true},
-                {proyect: 'Calculadora', tipo: 'Personal', tecnologias: 'JS', visible: true},
-                {proyect: 'Web-Dictonary', tipo: 'Personal', tecnologias: 'JS', visible: true},
-                {proyect: '4Juniors', tipo: 'Personal', tecnologias: 'JS', visible: true},
-                {proyect: 'pokemonBattle', tipo: 'Personal', tecnologias: 'JS', visible: true}
-            ]
-
-      } else {
-            this.works = [
-                {proyect: 'miWeb One', tipo: 'Personal', tecnologias: 'JS', visible: true},
-                {proyect: 'miWeb Two', tipo: 'Personal', tecnologias: 'JS', visible: true}
-            ]
-      }
-  }
-
 }
+
+export interface ProjectElement {
+  proyecto: string;
+  info: boolean;
+  visible: boolean;
+  git: boolean;
+  colored?: boolean
+}
+
+const ELEMENT_DATA: ProjectElement[] = [
+  {proyecto: 'BBVA Global Net Cash', info: true, visible: false, git: false, colored: false},
+  {proyecto: 'BBVA Net Cash', info: true, visible: false, git: false, colored: true},
+  {proyecto: 'Bankinter - Onboarding Web', info: true, visible: false, git: false, colored: false},
+  {proyecto: 'IBM App Web Interna', info: true, visible: false, git: false, colored: true},
+  {proyecto: 'convertMe', info: true, visible: true, git: true, colored: false},
+  {proyecto: 'Layout Redbility', info: true, visible: false, git: true, colored: true},
+  {proyecto: 'Web-Dictionary', info: true, visible: false, git: true, colored: false},
+  {proyecto: 'MusicaDelSigloXX', info: true, visible: false, git: true, colored: true},
+  {proyecto: 'Calculator', info: true, visible: false, git: true, colored: false},
+  {proyecto: '4Juniors', info: true, visible: false, git: true, colored: true},
+  {proyecto: 'Personal Web', info: true, visible: false, git: true, colored: false},
+  {proyecto: '3enRaya', info: true, visible: false, git: true, colored: true}
+];

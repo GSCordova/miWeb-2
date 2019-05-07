@@ -20,3 +20,11 @@
 mat-card {
     margin: auto !important;
 }
+
+table {
+    width: 100%;
+}
+
+.black {
+    color: black;
+}
