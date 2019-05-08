@@ -7,6 +7,7 @@ import { trigger, style, animate, transition, query } from '@angular/animations'
 // TODO: elegir icono redes sociales
 // TODO: estilos botones main
 // TODO: modal de app.component.ts dale bordes
+// TODO: carga de página infinito
 
 @Component({
   selector: 'app-root',
