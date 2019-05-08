@@ -1,6 +1,12 @@
 
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { trigger, style, animate, transition, query } from '@angular/animations';
+
+// TODO: i18n
+// TODO: elegir icono redes sociales
+// TODO: estilos botones main
+// TODO: modal de app.component.ts dale bordes
 
 @Component({
   selector: 'app-root',
@@ -44,8 +50,22 @@ import { trigger, style, animate, transition, query } from '@angular/animations'
 export class AppComponent implements OnInit {
 
   escritura: string = '';
+  animal: string;
+  name: string;
 
-  constructor() {  }
+  openDialog(): void {
+    const dialogRef = this.dialog.open(modalDialog, {
+      width: '35%',
+      data: {name: this.name, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit() {
 
@@ -62,12 +82,28 @@ export class AppComponent implements OnInit {
       }
 
     });
-
-
   }
 
   getRouteAnimation(outlet) {
     return outlet.activatedRouteData.animation;
+  }
+
+}
+
+
+@Component({
+  selector: 'modalDialog',
+  templateUrl: 'modalDialog.html',
+  styleUrls: ['./modalDialog.css'],
+})
+
+export class modalDialog {
+
+  constructor(
+    public dialogRef: MatDialogRef<modalDialog>){}
+
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }

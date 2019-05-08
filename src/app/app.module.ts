@@ -17,9 +17,12 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 // ModalFooter
 import { FooterModal } from './components/footer/footer.component';
+import { modalDialog } from './app.component';
 
 // Router
 import { AppRoutingModule } from './app-routing.module';
+
+// Pipe
 
 // Hammer.js
 import 'hammerjs';
@@ -34,7 +37,8 @@ import 'hammerjs';
     MainComponent,
     GianmarcoComponent,
     AptitudesComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    modalDialog
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,7 @@ import 'hammerjs';
     MyMaterialComponents,
     AppRoutingModule
   ],
-  entryComponents: [AppComponent, FooterModal],
+  entryComponents: [AppComponent, FooterModal, modalDialog],
   providers: [],
   bootstrap: [AppComponent]
 })

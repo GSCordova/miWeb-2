@@ -9,14 +9,14 @@
                 >format_color_fill
         </mat-icon>
         <mat-icon class="example-icon header-icon"
-                matTooltip="Idioma"
+                matTooltip="{{ idioma }}"
                 matTooltipPosition="below"
-                (click)='changeIdioma()'>language</mat-icon>
+                (click)='changeLanguage(idioma)'>language</mat-icon>
     </mat-toolbar-row>
 </mat-toolbar>
 
 <!--button mat-button [matMenuTriggerFor]="menu">Menu</button-->
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>Item 1</button>
-  <button mat-menu-item>Item 2</button>
+  <button mat-menu-item> Primero </button>
+  <button mat-menu-item> Segundo </button>
 </mat-menu>

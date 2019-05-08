@@ -9,8 +9,16 @@ import { Component, OnInit } from '@angular/core';
 
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  en_lang: string;
+
+  constructor() { 
+    this.en_lang = 'English';
+  }
 
   ngOnInit() { }
+
+  changeLanguage(param: string) {
+    console.log(param);
+  }
 
 }

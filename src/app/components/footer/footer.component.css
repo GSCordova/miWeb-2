@@ -1,7 +1,6 @@
   .footer {
     position: absolute;
     bottom: 0;
-    background-color: #ededed;
     justify-content: center;
     font-family: 'Exo', sans-serif;
   }
@@ -19,3 +18,5 @@
   .black {
     color: black;
   }
+
+  

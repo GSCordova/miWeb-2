@@ -16,7 +16,6 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
-    console.log(this.dataSource);
   }
 
   goBack() {

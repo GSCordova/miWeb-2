@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css?family=Exo');
 
 .main-espacio {
@@ -10,7 +9,8 @@
     margin-bottom: 15px;
 }
 
-.main-espacio .text-center:focus, img:focus {
+.main-espacio .text-center:focus,
+img:focus {
     outline: none;
 }
 
@@ -21,4 +21,22 @@
 .main-espacio img:hover {
     opacity: 0.85;
     cursor: pointer;
+}
+
+/**/
+
+.example_c {
+    color: #5b5b5b !important;
+    text-transform: uppercase;
+    background: #ffffff;
+    padding: 20px;
+    border: 2px solid #5b5b5b !important;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.example_c:hover {
+    color: #ffffff !important;
+    background: #494949;
+    transition: all 0.2s ease 0s;
 }

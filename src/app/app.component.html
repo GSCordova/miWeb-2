@@ -2,11 +2,16 @@
 <!-- Header -->
 <header-component></header-component>
 
-
 <!-- Router -->
 <div [@routerAnimation]="getRouteAnimation(route)">
   <router-outlet #route="outlet"></router-outlet>
 </div>
 
+<!-- Redes  -->
+<div class="menu-button"><i class="fas fa-ellipsis-h"></i>
+  <a><i class="fab fa-linkedin-in"></i></a>
+  <a (click)="openDialog()"><i class="fas fa-address-book"></i></a>
+  <a><i class="fab fa-github black"></i></a>
+</div>
 <!-- Footer -->
-<footer-component></footer-component>
+<!-- <footer-component></footer-component> -->

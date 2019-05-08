@@ -1,9 +1,17 @@
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+html { 
+    background: url(assets/back1.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 /* Espacio header - contenido */
 .main-espacio {
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 .main-espacio-menos {
